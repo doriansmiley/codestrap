@@ -1,0 +1,38 @@
+{
+  "name": "codestrap-website",
+  "version": "0.0.99",
+  "description": "CodeStrap website",
+  "main": "server.js",
+  "scripts": {
+    "test": "grunt",
+    "build": "docker build -t codestrap-website .",
+    "start": "node server",
+    "stop": "docker stop codestrap-website",
+    "remove": "docker rm codestrap-website",
+    "docker": "docker run -p 3000:3000 -i --init --rm --cap-add=SYS_ADMIN --name codestrap-website codestrap-website node -e \"`cat server.js`\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://doriansmiley@yahoo.com@github.com/doriansmiley/codestrap.git"
+  },
+  "keywords": [
+    "CodeStrap",
+    "Software Apprenticeships",
+    "Education"
+  ],
+  "author": "Dorian Smiley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doriansmiley/codestrap/issues"
+  },
+  "homepage": "https://github.com/doriansmiley/codestrap#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "^2.6.9",
+    "express": "^4.17.1",
+    "html-minifier-terser": "^5.1.1",
+    "lotusjs-components": "3.0.1",
+    "node-fetch": "^2.6.1",
+    "puppeteer": "^9.1.1"
+  }
+}
