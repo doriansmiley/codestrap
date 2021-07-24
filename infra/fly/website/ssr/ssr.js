@@ -62,9 +62,9 @@ async function ssr ({url, browserWSEndpoint, selector, data, publish, path, clea
     const start = Date.now();
     const browser = await puppeteer.connect({browserWSEndpoint});
     const page = await browser.newPage();
+    const stylesheetContents = {};
     try {
         await page.setRequestInterception(true);
-
 
         page.on('request', request => {
             const requestUrl = request._url.split('?')[0].split('#')[0];
@@ -72,11 +72,22 @@ async function ssr ({url, browserWSEndpoint, selector, data, publish, path, clea
                 blockedResourceTypes.indexOf(request.resourceType()) !== -1 ||
                 skippedResources.some(resource => requestUrl.indexOf(resource) !== -1)
             ) {
+                console.log(`aborting load of: ${requestUrl}`)
                 request.abort();
             } else {
                 request.continue();
             }
         });
+        // TODO figure out why on response is not invoked for style sheets
+        // 1. Stash the responses of stylesheets.
+        page.on('response', async resp => {
+            const responseUrl = resp.url();
+            const isStylesheet = resp.request().resourceType() === 'stylesheet';
+            if (isStylesheet) {
+                stylesheetContents[responseUrl] = await resp.text();
+            }
+        });
+
         // pipe console log from browser to node process
         page.on('console', consoleObj => logger.info(consoleObj.text()));
         if (data) {
@@ -94,7 +105,7 @@ async function ssr ({url, browserWSEndpoint, selector, data, publish, path, clea
         logger.info(`calling goto waiting for domcontentloaded: ${url}`);
         await page.goto(url, {
             timeout: timeout,
-            waitUntil: 'domcontentloaded'
+            waitUntil: 'networkidle0'
         });
 
         if (selector) {
@@ -106,6 +117,21 @@ async function ssr ({url, browserWSEndpoint, selector, data, publish, path, clea
         }
 
         logger.info('found selector, eval HTML');
+
+        // Inline the CSS.
+        // Replace stylesheets in the page with their equivalent <style>.
+        await page.$$eval('link[rel="stylesheet"]', (links, content) => {
+            links.forEach(link => {
+                const cssText = content[link.href];
+                if (cssText) {
+                    console.log(`inline css for ${link.href}`);
+                    const style = document.createElement('style');
+                    style.textContent = cssText;
+                    link.replaceWith(style);
+                }
+            });
+        }, stylesheetContents);
+
         let html = await page.$eval('html', (element, tagname) => {
             return element.getInnerHTML({includeShadowRoots: true});
         }, selector);
