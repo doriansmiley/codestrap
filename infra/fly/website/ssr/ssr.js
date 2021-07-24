@@ -113,7 +113,7 @@ async function ssr ({url, browserWSEndpoint, selector, data, publish, path, clea
         // Close the page we opened here (not the browser).
         await page.close();
         // TODO figure out why the base element is stripped from serialization
-        html = minify(html.replace('<head>', `<head><base href="${url}"/>`),{
+        html = minify(html.replace('<head>', `<!doctype html><head><base href="${url}"/>`),{
             collapseWhitespace: true,
             conservativeCollapse: true,
             decodeEntities: true,

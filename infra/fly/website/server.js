@@ -14,6 +14,7 @@ const logger = {
 
 const corsOptions = {
     origin: [
+        `http://localhost`,
         `http://localhost:${port}`,
         `http://localhost:${dockerPort}`,
     ],

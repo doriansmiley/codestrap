@@ -30,8 +30,11 @@ RUN apt-get update \
 COPY package.json .
 # COPY package-lock.json .
 COPY index.html .
+COPY favicon.ico .
 COPY index.js .
-COPY css/styles.css .
+COPY ./css ./css
+COPY ./img ./img
+COPY ./program ./program
 COPY server.js .
 COPY ./ssr ./ssr
 
@@ -44,13 +47,19 @@ RUN npm install \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /usr/app/node_modules
 
+# allow the pptruser write permissions to the container
+RUN chown -R pptruser:pptruser /usr/app
+RUN chmod 755 /usr/app
+
 # Run everything after as non-privileged user.
 USER pptruser
 
-ENV PORT=3000
+ENV PORT=80
 ENV DISPLAY=1.0
 ENV DEBUG='codestrap-website:*'
 
 EXPOSE 3000
+EXPOSE 80
+EXPOSE 443
 
 CMD ["google-chrome-stable"]
