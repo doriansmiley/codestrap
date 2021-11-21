@@ -39,21 +39,20 @@ app.get('/ssr', async (req, res, next) => {
         });
         browserWSEndpoint = await browser.wsEndpoint();
     }
-    // extract the path https://regex101.com/r/bVnMRC/1/
-    const path = req.query.url.match(/(?<=(http\:\/\/|https\:\/\/)[a-zA-Z.:\-0-9]+)\/[a-zA-Z.:\-0-9\/]*/);
+    // extract the path https://regex101.com/r/bVnMRC/2
+    // IMPORTANT requires trailing slash
+    const path = req.query.url.match(/(?<=(http\:\/\/|https\:\/\/)[a-zA-Z.:\-0-9]+)\/[a-zA-Z.:\-0-9\/]+\//) || '/index.js';
     logger.info(`path is: ${path}\n`);
-    if (path) {
-        const libPath = (path[0].length > 1 ) ? path[0].substr(0,path[0].length-1) : `${path[0]}index.js`;
-        logger.info(`libPath is ${libPath}`);
-        // if there is a path try to load a SSR data loading function. We assume it will be found
-        // at path
-        try {
-            const serverFunctions = require(`.${libPath}`);
-            data = serverFunctions.data;
-            publish = serverFunctions.publish;
-        } catch (e) {
-            logger.info('no server function found');
-        }
+    const libPath = (path[0].length > 1 ) ? path[0].substr(0,path[0].length-1) : path;
+    logger.info(`libPath is ${libPath}`);
+    // if there is a path try to load a SSR data loading function. We assume it will be found
+    // at path
+    try {
+        const serverFunctions = require(`.${libPath}`);
+        data = serverFunctions.data;
+        publish = serverFunctions.publish;
+    } catch (e) {
+        logger.info('no server function found');
     }
 
     const {html, ttRenderMs} = await ssr({

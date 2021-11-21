@@ -14,7 +14,9 @@
 /lib
 /docs
 /infra/fly/website/scripts
+**/.dist
 
 example/image-gallery/5d1a1293b965cba3ac1c58697622e3a8.html
 infra/fly/website/6666cd76f96956469e7be39d750cc7d9.html
+infra/fly/website/program/9cb1a31d8c8534018d4884417a5c2f1b.html
 tmp

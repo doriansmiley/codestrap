@@ -40,7 +40,7 @@ const skippedResources = [
     'clicksor',
     'tiqcdn',
 ];
-
+// TODO: create a cache function that can connect to REDIS or use a Map
 const RENDER_CACHE = new Map();
 const timeout = process.env.TIMEOUT || 5000;
 
