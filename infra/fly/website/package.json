@@ -4,12 +4,11 @@
   "description": "CodeStrap website",
   "main": "server.js",
   "scripts": {
-    "test": "grunt",
     "build": "docker build -t codestrap-website .",
     "start": "node server",
     "stop": "docker stop codestrap-website",
     "remove": "docker rm codestrap-website",
-    "docker": "docker run -p 3000:3000 -i --init --rm --cap-add=SYS_ADMIN --name codestrap-website codestrap-website node -e \"`cat server.js`\""
+    "docker": "docker run -p 3000:3000 -i --rm --name codestrap-website codestrap-website node -e \"`cat server.js`\""
   },
   "repository": {
     "type": "git",

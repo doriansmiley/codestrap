@@ -33,6 +33,13 @@ app.get('/ssr', async (req, res, next) => {
     // IMPORTANT: you can't render shadow DOM without this flag
     // getInnerHTML will be undefined without it
     args.push('--enable-experimental-web-platform-features');
+    // This will write shared memory files into /tmp instead of /dev/shm. See crbug.com/736452 for more details.
+    // See https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#tips
+    args.push('--disable-dev-shm-usage');
+    // TODO remove --no-sandbox and --disable-setuid-sandbox if there is a better solution from fly
+    // TODO see https://community.fly.io/t/passing-params-to-docker-run/2016/19 for details
+    args.push('--no-sandbox');
+    args.push('--disable-setuid-sandbox');
     if (!browserWSEndpoint) {
         const browser = await puppeteer.launch({
             args

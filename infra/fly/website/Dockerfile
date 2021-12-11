@@ -1,6 +1,8 @@
-FROM node:16-slim
+FROM node:16-slim as platform
 
 MAINTAINER Dorian Smiley, dsmiley@codestrap.me
+
+FROM platform as puppeteer
 
 WORKDIR /usr/app
 
@@ -19,10 +21,11 @@ RUN apt-get update \
 
 # If running Docker >= 1.13.0 use docker run's --init arg to reap zombie processes, otherwise
 # uncomment the following lines to have `dumb-init` as PID 1
-# ADD https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_x86_64 /usr/local/bin/dumb-init
-# RUN chmod +x /usr/local/bin/dumb-init
-# ENTRYPOINT ["dumb-init", "--"]
+ADD https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_x86_64 /usr/local/bin/dumb-init
+RUN chmod +x /usr/local/bin/dumb-init
+ENTRYPOINT ["dumb-init", "--"]
 
+FROM puppeteer as install
 # Uncomment to skip the chromium download when installing puppeteer. If you do,
 # you'll need to launch puppeteer with:
 #     browser.launch({executablePath: 'google-chrome-stable'})
@@ -46,6 +49,8 @@ RUN npm install \
     && mkdir -p /home/pptruser/Downloads \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /usr/app/node_modules
+
+FROM install as setup
 
 # allow the pptruser write permissions to the container
 RUN chown -R pptruser:pptruser /usr/app
