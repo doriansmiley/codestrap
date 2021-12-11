@@ -8,7 +8,7 @@
     "start": "node server",
     "stop": "docker stop codestrap-website",
     "remove": "docker rm codestrap-website",
-    "docker": "docker run -p 3000:3000 -i --rm --name codestrap-website codestrap-website node -e \"`cat server.js`\""
+    "docker": "docker run -p 3000:3000 -i --rm --name codestrap-website codestrap-website"
   },
   "repository": {
     "type": "git",
