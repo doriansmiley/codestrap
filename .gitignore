@@ -22,5 +22,6 @@ infra/fly/website/program/9cb1a31d8c8534018d4884417a5c2f1b.html
 tmp
 
 infra/fly/codestrap-alpha/config.json
+infra/fly/codestrap-alpha/test.sh
 
 **/.env

@@ -12,20 +12,10 @@ COPY ./commands ./commands
 
 RUN npm install
 
-FROM install as setup
-
-# allow the pptruser write permissions to the container
-RUN chown -R pptruser:pptruser /usr/app
-RUN chmod 755 /usr/app
-
-# Run everything after as non-privileged user.
-USER pptruser
-
 ENV PORT=80
 ENV DISPLAY=1.0
-ENV DEBUG='codestrap-codestrap-gpt-bot:*'
+# ENV DEBUG='codestrap-codestrap-gpt-bot:*'
 
-EXPOSE 3000
 EXPOSE 80
 EXPOSE 443
 
