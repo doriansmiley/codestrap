@@ -1,9 +1,9 @@
-# fly.toml file generated for codestrap-website on 2021-07-24T11:00:30-07:00
+# fly.toml file generated for codestrap-gpt-bot on 2022-11-06T07:40:25-08:00
 
-app = "codestrap-website"
-
-kill_signal = "SIGTERM"
+app = "codestrap-gpt-bot"
+kill_signal = "SIGINT"
 kill_timeout = 5
+processes = []
 
 [env]
 
@@ -13,16 +13,17 @@ kill_timeout = 5
 
 [[services]]
   http_checks = []
-  internal_port = 3000
+  internal_port = 8080
+  processes = ["app"]
   protocol = "tcp"
   script_checks = []
-
   [services.concurrency]
     hard_limit = 25
     soft_limit = 20
     type = "connections"
 
   [[services.ports]]
+    force_https = true
     handlers = ["http"]
     port = 80
 
@@ -33,5 +34,5 @@ kill_timeout = 5
   [[services.tcp_checks]]
     grace_period = "1s"
     interval = "15s"
-    restart_limit = 6
+    restart_limit = 0
     timeout = "2s"
