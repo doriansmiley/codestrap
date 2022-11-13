@@ -12,9 +12,9 @@ COPY ./commands ./commands
 
 RUN npm install
 
-ENV PORT=80
+ENV PORT=8080
 ENV DISPLAY=1.0
-# ENV DEBUG='codestrap-codestrap-gpt-bot:*'
+ENV DEBUG='codestrap-codestrap-gpt-bot:*'
 
 EXPOSE 80
 EXPOSE 443

@@ -1,15 +1,41 @@
 require('dotenv').config();
+const express = require("express");
+const router = express.Router({});
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, GatewayIntentBits, Events, Collection } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.DirectMessages] });
 const { Configuration, OpenAIApi } = require("openai");
 const debug = require('debug')('codestrap-codestrap-gpt-bot:index');
+
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 let prompt = '';
+
+const app = express();
+
+router.get('/', async (_req, res, _next) => {
+
+    const healthcheck = {
+        uptime: process.uptime(),
+        message: 'OK',
+        timestamp: Date.now()
+    };
+    try {
+        res.send(healthcheck);
+    } catch (error) {
+        healthcheck.message = error;
+        res.status(503).send();
+    }
+});
+
+app.use('/healthcheck', router);
+app.use('/', router);
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, console.log("Server has started at port " + PORT));
 
 debug(`codestrap-codestrap-gpt-bot starting`);
 
@@ -53,3 +79,4 @@ client.on(Events.InteractionCreate, async interaction => {
 });
 
 client.login(process.env.BOT_TOKEN);
+
