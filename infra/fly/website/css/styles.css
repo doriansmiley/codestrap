@@ -168,7 +168,7 @@ p a {
  */
 
 .splash-container {
-    background: url("../img/rockets.svg") top center;
+    background: url("../img/palantir-foundry-hbo.png") top center;
     background-size: cover;
     z-index: 1;
     overflow: hidden;
@@ -177,6 +177,7 @@ p a {
     height: 88%;
     top: 0;
     left: 0;
+    opacity: .9;
     position: fixed !important;
 }
 
@@ -195,12 +196,13 @@ p a {
 .splash-head {
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: #302b59;
     border: 3px solid white;
     padding: 1em 1.6em;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
+    background-color: rgba(253, 253, 255, 0.7);
 }
 
 /* This is the subheading that appears on the blue section */
@@ -323,6 +325,6 @@ p a {
 @media (min-width: 78em) {
     /* We increase the header font size even more */
     .splash-head {
-        font-size: 300%;
+        font-size: 200%;
     }
 }
