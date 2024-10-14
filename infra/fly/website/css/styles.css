@@ -200,6 +200,10 @@ p a {
     max-width: 100px;
 }
 
+.pure-form-img {
+    width: 30vw;
+}
+
 /* This is the main heading that appears on the blue section */
 .splash-head {
     font-size: 20px;
