@@ -8,6 +8,7 @@ import { useState, useEffect } from "react"
 
 export function LandingPage() {
   const [darkMode, setDarkMode] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     if (darkMode) {
@@ -19,6 +20,10 @@ export function LandingPage() {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode)
+  }
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
   }
 
   return (
@@ -46,12 +51,29 @@ export function LandingPage() {
           <Button variant="outline" className="hidden md:flex">
             Get Started
           </Button>
-          <Button variant="ghost" size="icon" className="md:hidden">
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMobileMenu}>
             <Menu className="h-4 w-4" />
-            <span className="sr-only">Menu</span>
+            <span className="sr-only">Toggle menu</span>
           </Button>
         </div>
       </header>
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
+          <nav className="flex flex-col p-4 space-y-2">
+            <Button variant="ghost" className="justify-start" onClick={() => { /* Add search functionality */ }}>
+              <Search className="h-4 w-4 mr-2" />
+              Search
+            </Button>
+            <Button variant="ghost" className="justify-start">
+              Get Started
+            </Button>
+            <Button variant="ghost" className="justify-start" onClick={toggleDarkMode}>
+              {darkMode ? <Sun className="h-4 w-4 mr-2" /> : <Moon className="h-4 w-4 mr-2" />}
+              {darkMode ? 'Light Mode' : 'Dark Mode'}
+            </Button>
+          </nav>
+        </div>
+      )}
       <main className="flex-1">
         <section className="w-full py-24 md:py-32 flex items-center justify-center">
           <div className="container px-4 md:px-6">
@@ -101,7 +123,6 @@ export function LandingPage() {
                 <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
                   <span>faster than bloated consultancies</span>
                 </div>
-                <ChevronRight className="h-4 w-4 my-1" />
               </div>
             </div>
           </div>
@@ -264,7 +285,6 @@ export function LandingPage() {
             <a className="text-xs text-gray-500 dark:text-gray-400 hover:underline underline-offset-4" href="#">
               Privacy
             </a>
-
           </nav>
         </div>
       </footer>
