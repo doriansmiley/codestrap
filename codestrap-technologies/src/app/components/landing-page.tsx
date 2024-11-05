@@ -63,8 +63,8 @@ export function LandingPage() {
                 </span>
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                CodeStrap Technologies provides services as software to boostrap AI adoption across the world&apos;s largest enterprises.
-                We specialize in Palantir Technologies and offer foundational ontologies that work natively with Palantir&apos;s leading offerings!
+                CodeStrap Technologies provides services as software to bootstrap AI adoption across the world&apos;s largest enterprises.
+                We specialize in Palantir Technologies and offer foundational ontologies that codify your business!
               </p>
             </div>
           </div>
@@ -86,10 +86,11 @@ export function LandingPage() {
               <Card className="bg-gray-50/50 dark:bg-gray-800/50">
                 <CardContent className="p-6 space-y-2">
                   <Users className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
-                  <h3 className="text-xl font-medium tracking-tight dark:text-white">Palantir SI + Management Consulting</h3>
+                  <h3 className="text-xl font-medium tracking-tight dark:text-white">Consulting + Staffing</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    We specialize in data integration. Our partners include many ex-Palantir employees who accelerate SI.
-                    Our consultants implement strategy and align use cases with business value.
+                    We specialize in integrating Palantir Foundry in your organization.
+                    We can accelerate data integration, use case development, and strategy execution.
+                    Our partners include many ex-Palantir employees who accelerate delivery through staff augmentation.
                   </p>
                 </CardContent>
               </Card>
@@ -99,7 +100,8 @@ export function LandingPage() {
                   <h3 className="text-xl font-medium tracking-tight dark:text-white">Scaled Adoption Framework</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     Scale AI across your enterprise using our framework and specialists. We know the challenges you will
-                    face and how to overcome them.
+                    face and how to overcome them. We will create your champions, scale your teams, and empower you to build
+                    your own solutions.
                   </p>
                 </CardContent>
               </Card>
@@ -110,21 +112,11 @@ export function LandingPage() {
         <section className="w-full py-12 md:py-24 flex items-center justify-center">
           <div className="container px-4 md:px-6">
             <div className="grid gap-12 lg:grid-cols-2">
-              <div className="space-y-8">
+              <div className="space-y-8 grow">
                 <h2 className="text-3xl font-medium tracking-tight dark:text-white text-center">Engagement Fees</h2>
                 <p className="text-gray-500 dark:text-gray-400 text-center">
                   The majority of our revenue is generated from engagement fees. We leverage our customers workforce to deliver all projects. We are a catalyst for our customers, not their workforce.
                 </p>
-              </div>
-              <div className="space-y-8">
-                <h2 className="text-3xl font-medium tracking-tight dark:text-white text-center">Licensing</h2>
-                <p className="text-gray-500 dark:text-gray-400 text-center">
-                  Licensing fees for our foundational ontologies, tools and training/support generate ARR.
-                </p>
-              </div>
-            </div>
-            <div className="grid gap-12 lg:grid-cols-2">
-              <div className="space-y-8">
                 <div className="grid gap-4 md:grid-cols-3">
                   <Card className="bg-gray-50/50 dark:bg-gray-800/50">
                     <CardContent className="p-6">
@@ -150,8 +142,12 @@ export function LandingPage() {
                   </Card>
                 </div>
               </div>
-              <div className="space-y-8">
-                <div className="grid gap-4 md:grid-cols-3">
+              <div className="space-y-8 grow flex flex-col justify-between">
+                <h2 className="text-3xl font-medium tracking-tight dark:text-white text-center">Licensing</h2>
+                <p className="text-gray-500 dark:text-gray-400 text-center">
+                  Licensing fees for our foundational ontologies, tools and training/support generate ARR.
+                </p>
+                <div className="mt-auto grid gap-4 md:grid-cols-3">
                   <Card className="bg-gray-50/50 dark:bg-gray-800/50">
                     <CardContent className="p-6">
                       <CircleDollarSign className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
