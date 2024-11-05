@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Button } from "@codestrap/app/components/ui/button"
 import { Card, CardContent } from "@codestrap/app/components/ui/card"
-import { CircleDollarSign, Users, Brain, Rocket, Search, Menu, Moon, Sun } from "lucide-react"
+import { CircleDollarSign, Users, Brain, Rocket, Search, Menu, Moon, Sun, ChevronRight } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export function LandingPage() {
@@ -66,6 +66,43 @@ export function LandingPage() {
                 CodeStrap Technologies provides services as software to bootstrap AI adoption across the world&apos;s largest enterprises.
                 We specialize in Palantir Technologies and offer foundational ontologies that codify your business!
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-6 bg-gray-900 dark:bg-black flex items-center justify-center">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-wrap justify-center items-center text-white text-xs sm:text-sm">
+              <div className="flex flex-col items-center m-2">
+                <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
+                  <span>Combine industry-leading consulting</span>
+                </div>
+                <ChevronRight className="h-4 w-4 my-1" />
+              </div>
+              <div className="flex flex-col items-center m-2">
+                <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
+                  <span>with the leading AI platform</span>
+                </div>
+                <ChevronRight className="h-4 w-4 my-1" />
+              </div>
+              <div className="flex flex-col items-center m-2">
+                <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
+                  <span>to deliver value-focused outcomes</span>
+                </div>
+                <ChevronRight className="h-4 w-4 my-1" />
+              </div>
+              <div className="flex flex-col items-center m-2">
+                <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
+                  <span>with zero employees</span>
+                </div>
+                <ChevronRight className="h-4 w-4 my-1" />
+              </div>
+              <div className="flex flex-col items-center m-2">
+                <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
+                  <span>faster than bloated consultancies</span>
+                </div>
+                <ChevronRight className="h-4 w-4 my-1" />
+              </div>
             </div>
           </div>
         </section>
