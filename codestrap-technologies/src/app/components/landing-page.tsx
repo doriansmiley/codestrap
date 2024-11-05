@@ -123,6 +123,7 @@ export function LandingPage() {
                 <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
                   <span>faster than bloated consultancies</span>
                 </div>
+                <ChevronRight className="h-4 w-4 my-1" />
               </div>
             </div>
           </div>
