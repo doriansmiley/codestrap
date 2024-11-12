@@ -85,8 +85,8 @@ export function LandingPage() {
                 </span>
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                CodeStrap Technologies provides services as software to bootstrap AI adoption across the world&apos;s largest enterprises.
-                We specialize in Palantir Technologies and offer foundational ontologies that codify your business!
+                CodeStrap Technologies provides AI Services built on Palantir Technologies.<br />
+                We bootstrap AI adoption across the world&apos;s largest enterprises using foundational ontologies that codify your business!
               </p>
             </div>
           </div>
@@ -95,61 +95,65 @@ export function LandingPage() {
         <section className="w-full py-6 bg-gray-900 dark:bg-black flex items-center justify-center">
           <div className="container px-4 md:px-6">
             <div className="flex flex-wrap justify-center items-center text-white text-xs sm:text-sm">
-              <div className="flex flex-col items-center m-2">
+              <div className="flex flex-row items-center m-2">
                 <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
-                  <span>Combine industry-leading consulting</span>
+                  <span>Industry Leading Consulting</span>
                 </div>
                 <ChevronRight className="h-4 w-4 my-1" />
               </div>
-              <div className="flex flex-col items-center m-2">
+              <div className="flex flex-row items-center m-2">
                 <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
-                  <span>with the leading AI platform</span>
+                  <span>The Best AI Software</span>
                 </div>
                 <ChevronRight className="h-4 w-4 my-1" />
               </div>
-              <div className="flex flex-col items-center m-2">
+              <div className="flex flex-row items-center m-2">
                 <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
-                  <span>to deliver value-focused outcomes</span>
+                  <span>Fixed Fees and Timelines</span>
                 </div>
                 <ChevronRight className="h-4 w-4 my-1" />
               </div>
-              <div className="flex flex-col items-center m-2">
+              <div className="flex flex-row items-center m-2">
                 <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
-                  <span>with zero employees</span>
+                  <span>Maximum Business Value</span>
                 </div>
-                <ChevronRight className="h-4 w-4 my-1" />
-              </div>
-              <div className="flex flex-col items-center m-2">
-                <div className="bg-gray-800 dark:bg-gray-800/50 w-32 h-24 p-2 rounded-md border border-gray-700 flex items-center justify-center text-center">
-                  <span>faster than bloated consultancies</span>
-                </div>
-                <ChevronRight className="h-4 w-4 my-1" />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 bg-white dark:bg-gray-800 flex items-center justify-center">
+        <section className="w-full py-12 md:pt-24 bg-white dark:bg-gray-800 flex items-center justify-center">
           <div className="container px-4 md:px-6">
             <div className="grid gap-12 lg:grid-cols-3">
               <Card className="bg-gray-50/50 dark:bg-gray-800/50">
                 <CardContent className="p-6 space-y-2">
                   <Brain className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
-                  <h3 className="text-xl font-medium tracking-tight dark:text-white">AI Services</h3>
+                  <h3 className="text-xl font-medium tracking-tight dark:text-white">AI Software, That Works!</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    We provide foundational ontologies that ship with an agentic workforce. Our tools and automation
-                    rapidly hydrate the ontology and align models with your business.
+                    SaaS companies are optimized for their growth, not your business.
+                    Outsourcing your mission is not a winning strategy.
+                    It&apos;s time to mold software to your business by transforming it into an ontology.
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    We provide <span className="font-bold text-green-400">foundational ontologies that ship with an agentic workforce</span>.
+                    Our tools and automation rapidly hydrate the ontology and align models with your business to <span className="font-bold text-green-400">deliver value quickly</span>.
                   </p>
                 </CardContent>
               </Card>
               <Card className="bg-gray-50/50 dark:bg-gray-800/50">
                 <CardContent className="p-6 space-y-2">
                   <Users className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
-                  <h3 className="text-xl font-medium tracking-tight dark:text-white">Consulting + Staffing</h3>
+                  <h3 className="text-xl font-medium tracking-tight dark:text-white">Palantir SI + Management Consulting</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    We specialize in integrating Palantir Foundry in your organization.
-                    We can accelerate data integration, use case development, and strategy execution.
-                    Our partners include many ex-Palantir employees who accelerate delivery through staff augmentation.
+                    Traditional management consulting is a rates-and-hours
+                    business that is antithetical to AI&apos;s value proposition.
+                    A fraction of fees are value accretive to clients, with the rest
+                    spent on presentations, project management, and meetings.
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    <span className="font-bold text-green-400">We specialize in enablement</span>. Our partners are business leaders who have implemented and managed Palantir Tech at
+                    Fortune 500 companies. Our teams <span className="font-bold text-green-400">implement strategy and align use cases with value</span>.
+                    And we do this at a low fixed costs by <span className="font-bold text-green-400">using the technology we sell</span>.
                   </p>
                 </CardContent>
               </Card>
@@ -158,10 +162,86 @@ export function LandingPage() {
                   <Rocket className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
                   <h3 className="text-xl font-medium tracking-tight dark:text-white">Scaled Adoption Framework</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Scale AI across your enterprise using our framework and specialists. We know the challenges you will
-                    face and how to overcome them. We will create your champions, scale your teams, and empower you to build
-                    your own solutions.
+                    Adopting and scaling Foundry is difficult. There are challenges
+                    across governance, development and value tracking that few have solved.
                   </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Scale AI across your enterprise using our framework and specialists.
+                    <span className="font-bold text-green-400">We know the challenges you will face and how to overcome them</span>.
+                    We will create your champions, scale your teams, and empower you to build your own solutions.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:pb-24 bg-white dark:bg-gray-800 flex items-center justify-center">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-medium tracking-tight text-center mb-6 dark:text-white">Founding Partners</h2>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+              CodeStrap Technologies is <span className="font-bold text-green-400">composed of disruptors</span> who have driven organizational change across business and engineering
+              roles at the worlds largest institutions. We&apos;ve all graduated as Palantir champions from our respective industries and <span className="font-bold text-green-400">combine a mastery of Foundry with impeccable business acumen.</span>
+            </p>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+                <CardContent className="p-6 text-center">
+                  <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                    <Image
+                      src="/cdeeks.png"
+                      alt="Team member photo"
+                      width={96}
+                      height={96}
+                      className="object-cover"
+                    />
+                  </div>
+                  <h3 className="font-medium tracking-tight dark:text-white">Connor Deeks</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">CEO</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">PwC</p>
+                  <ul className="text-sm text-gray-500 dark:text-gray-400">
+                    <li>Palantir Alliance Lead Director</li>
+                    <li>Led commercial strategy</li>
+                    <li>Pipeline $0 to $40m in 2 years</li>
+                    <li>Led implementation at major clients</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+                <CardContent className="p-6 text-center">
+                  <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                    <Image
+                      src="/dsmiley.png"
+                      alt="Team member photo"
+                      width={96}
+                      height={96}
+                      className="object-cover"
+                    />
+                  </div>
+                  <h3 className="font-medium tracking-tight dark:text-white">Dorian Smiley</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">CTO</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">PwC, ex-Brainly</p>
+                  <ul className="text-sm text-gray-500 dark:text-gray-400">
+                    <li>Palantir Alliance Tech Lead</li>
+                    <li>Global Palantir Ambassador</li>
+                    <li>Developer Advocate and Influencer</li>
+                    <li>20+ years leading engineering teams</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+                <CardContent className="p-6 text-center">
+                  <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
+                  <h3 className="font-medium tracking-tight dark:text-white">Redacted</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Platform Lead, Manufacturing</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">F500 Industrial OEM</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+                <CardContent className="p-6 text-center">
+                  <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
+                  <h3 className="font-medium tracking-tight dark:text-white">Redacted</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Platform Lead, Healthcare</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">F500 Healthcare Logistics</p>
                 </CardContent>
               </Card>
             </div>
@@ -174,7 +254,7 @@ export function LandingPage() {
               <div className="space-y-8 grow">
                 <h2 className="text-3xl font-medium tracking-tight dark:text-white text-center">Engagement Fees</h2>
                 <p className="text-gray-500 dark:text-gray-400 text-center">
-                  The majority of our revenue is generated from engagement fees. We leverage our customers workforce to deliver all projects. We are a catalyst for our customers, not their workforce.
+                  The majority of our revenue is generated from engagement fees. We leverage our customers workforce to deliver all projects using our software accelerators.
                 </p>
                 <div className="grid gap-4 md:grid-cols-3">
                   <Card className="bg-gray-50/50 dark:bg-gray-800/50">
@@ -189,14 +269,14 @@ export function LandingPage() {
                     <CardContent className="p-6">
                       <CircleDollarSign className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
                       <h4 className="text-xl font-medium tracking-tight dark:text-white">$2m</h4>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Year 1</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Projected Year 1</p>
                     </CardContent>
                   </Card>
                   <Card className="bg-gray-50/50 dark:bg-gray-800/50">
                     <CardContent className="p-6">
                       <CircleDollarSign className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
                       <h4 className="text-xl font-medium tracking-tight dark:text-white">$88m</h4>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Year 5</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Projected Year 5</p>
                     </CardContent>
                   </Card>
                 </div>
@@ -210,14 +290,14 @@ export function LandingPage() {
                   <Card className="bg-gray-50/50 dark:bg-gray-800/50">
                     <CardContent className="p-6">
                       <CircleDollarSign className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
-                      <h4 className="text-xl font-medium tracking-tight dark:text-white">$100k</h4>
+                      <h4 className="text-xl font-medium tracking-tight dark:text-white">$100k/yr.</h4>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Ontology Foundations</p>
                     </CardContent>
                   </Card>
                   <Card className="bg-gray-50/50 dark:bg-gray-800/50">
                     <CardContent className="p-6">
                       <CircleDollarSign className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
-                      <h4 className="text-xl font-medium tracking-tight dark:text-white">$50k</h4>
+                      <h4 className="text-xl font-medium tracking-tight dark:text-white">$50k/yr.</h4>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Training and Support</p>
                     </CardContent>
                   </Card>
@@ -225,51 +305,11 @@ export function LandingPage() {
                     <CardContent className="p-6">
                       <CircleDollarSign className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
                       <h4 className="text-xl font-medium tracking-tight dark:text-white">$40m ARR</h4>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Year 5</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Projected Year 5</p>
                     </CardContent>
                   </Card>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800 flex items-center justify-center">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-medium tracking-tight text-center mb-12 dark:text-white">Founding Team</h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
-                  <h3 className="font-medium tracking-tight dark:text-white">Connor Deeks</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">CEO</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">PwC</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
-                  <h3 className="font-medium tracking-tight dark:text-white">Dorian Smiley</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">CTO</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">PwC, ex-Brainly</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
-                  <h3 className="font-medium tracking-tight dark:text-white">TBD</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Position</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Company</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
-                  <h3 className="font-medium tracking-tight dark:text-white">TBD</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Position</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Company</p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
