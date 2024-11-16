@@ -188,9 +188,10 @@ export function LandingPage() {
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
               CodeStrap Technologies is <span className="font-bold text-green-400">composed of disruptors</span> who have driven organizational change across business and engineering
               roles at the world&apos;s largest institutions. We&apos;ve all graduated as Palantir champions from our respective industries and <span className="font-bold text-green-400">combine a mastery of Foundry with impeccable business acumen.</span>
-              We have run AI workloads in production at scale and have learned how valuable heterodox thinking is within the context of reinventing software to be AI first.
-              Our founders have worked at every level of the software stack and business, and we are using that depth of knowledge
-              and experience to do something that has never been done before: <span className="font-bold text-green-400">deliver enterprise software that compounds value for the customer</span>.
+              We have run AI workloads in production at scale.
+              We have learned how valuable heterodox thinking is when reinventing software to be AI first.
+              Our founders have worked at every level of the software stack and business, and are using that depth of knowledge
+              to do something that has never been done before: <span className="font-bold text-green-400">deliver enterprise software that compounds value for the customer</span>.
             </p>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               <div
