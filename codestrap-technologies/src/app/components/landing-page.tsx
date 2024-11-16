@@ -1,14 +1,20 @@
 'use client'
 
-import Image from "next/image"
-import { Button } from "@codestrap/app/components/ui/button"
-import { Card, CardContent } from "@codestrap/app/components/ui/card"
-import { CircleDollarSign, Users, Brain, Rocket, Search, Menu, Moon, Sun, ChevronRight } from "lucide-react"
-import { useState, useEffect } from "react"
+import Image from "next/image";
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { CircleDollarSign, Users, Brain, Rocket, Search, Menu, Moon, Sun, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+
+import { Button } from "@codestrap/app/components/ui/button";
+import { Card, CardContent } from "@codestrap/app/components/ui/card";
+
 
 export function LandingPage() {
   const [darkMode, setDarkMode] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+  const router = useRouter()
 
   useEffect(() => {
     if (darkMode) {
@@ -86,7 +92,7 @@ export function LandingPage() {
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 CodeStrap Technologies provides AI Services built on Palantir Technologies.<br />
-                We bootstrap AI adoption across the world&apos;s largest enterprises using foundational ontologies that codify your business!
+                We bootstrap AI adoption across the world&apos;s largest enterprises using foundational ontologies that codify your business.
               </p>
             </div>
           </div>
@@ -153,7 +159,7 @@ export function LandingPage() {
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     <span className="font-bold text-green-400">We specialize in enablement</span>. Our partners are business leaders who have implemented and managed Palantir Tech at
                     Fortune 500 companies. Our teams <span className="font-bold text-green-400">implement strategy and align use cases with value</span>.
-                    And we do this at a low fixed costs by <span className="font-bold text-green-400">using the technology we sell</span>.
+                    And we do this at a low fixed cost by <span className="font-bold text-green-400">using the technology we sell</span>.
                   </p>
                 </CardContent>
               </Card>
@@ -176,58 +182,87 @@ export function LandingPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:pb-24 bg-white dark:bg-gray-800 flex items-center justify-center">
+        <section id="team" className="w-full py-12 md:pb-24 bg-white dark:bg-gray-800 flex items-center justify-center">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-medium tracking-tight text-center mb-6 dark:text-white">Founding Partners</h2>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
               CodeStrap Technologies is <span className="font-bold text-green-400">composed of disruptors</span> who have driven organizational change across business and engineering
-              roles at the worlds largest institutions. We&apos;ve all graduated as Palantir champions from our respective industries and <span className="font-bold text-green-400">combine a mastery of Foundry with impeccable business acumen.</span>
+              roles at the world&apos;s largest institutions. We&apos;ve all graduated as Palantir champions from our respective industries and <span className="font-bold text-green-400">combine a mastery of Foundry with impeccable business acumen.</span>
+              We have run AI workloads in production at scale and have learned how valuable heterodox thinking is within the context of reinventing software to be AI first.
+              Our founders have worked at every level of the software stack and business, and we are using that depth of knowledge
+              and experience to do something that has never been done before: <span className="font-bold text-green-400">deliver enterprise software that compounds value for the customer</span>.
             </p>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
-                <CardContent className="p-6 text-center">
-                  <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
-                    <Image
-                      src="/cdeeks.png"
-                      alt="Team member photo"
-                      width={96}
-                      height={96}
-                      className="object-cover"
-                    />
+              <div
+                className="relative transition-all duration-300 ease-in-out transform hover:scale-105"
+                onMouseEnter={() => setHoveredCard(0)}
+                onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => router.push('/bios#connor-deeks')}
+              >
+                <Link href="/bios">
+                  <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+                    <CardContent className="p-6 text-center">
+                      <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                        <Image
+                          src="/cdeeks.png"
+                          alt="Team member photo"
+                          width={96}
+                          height={96}
+                          className="object-cover"
+                        />
+                      </div>
+                      <h3 className="font-medium tracking-tight dark:text-white">Connor Deeks</h3>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">CEO</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">PwC</p>
+                      <ul className="text-sm text-gray-500 dark:text-gray-400">
+                        <li>Palantir Alliance Lead Director</li>
+                        <li>Led commercial strategy</li>
+                        <li>Pipeline $0 to $40m in 2 years</li>
+                        <li>Led implementation at major clients</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </Link>
+                {hoveredCard === 0 && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+                    <p className="text-white font-medium">Click to learn more</p>
                   </div>
-                  <h3 className="font-medium tracking-tight dark:text-white">Connor Deeks</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">CEO</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">PwC</p>
-                  <ul className="text-sm text-gray-500 dark:text-gray-400">
-                    <li>Palantir Alliance Lead Director</li>
-                    <li>Led commercial strategy</li>
-                    <li>Pipeline $0 to $40m in 2 years</li>
-                    <li>Led implementation at major clients</li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
-                <CardContent className="p-6 text-center">
-                  <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
-                    <Image
-                      src="/dsmiley.png"
-                      alt="Team member photo"
-                      width={96}
-                      height={96}
-                      className="object-cover"
-                    />
+                )}
+              </div>
+              <div
+                className="relative transition-all duration-300 ease-in-out transform hover:scale-105"
+                onMouseEnter={() => setHoveredCard(1)}
+                onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => router.push('/bios#dorian-smiley')}
+              >
+                <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+                  <CardContent className="p-6 text-center">
+                    <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                      <Image
+                        src="/dsmiley.png"
+                        alt="Team member photo"
+                        width={96}
+                        height={96}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="font-medium tracking-tight dark:text-white">Dorian Smiley</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">CTO</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">PwC, ex-Brainly</p>
+                    <ul className="text-sm text-gray-500 dark:text-gray-400">
+                      <li>Palantir Alliance Tech Lead</li>
+                      <li>Global Palantir Ambassador</li>
+                      <li>Developer Advocate and Influencer</li>
+                      <li>20+ years leading engineering teams</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                {hoveredCard === 1 && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+                    <p className="text-white font-medium">Click to learn more</p>
                   </div>
-                  <h3 className="font-medium tracking-tight dark:text-white">Dorian Smiley</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">CTO</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">PwC, ex-Brainly</p>
-                  <ul className="text-sm text-gray-500 dark:text-gray-400">
-                    <li>Palantir Alliance Tech Lead</li>
-                    <li>Global Palantir Ambassador</li>
-                    <li>Developer Advocate and Influencer</li>
-                    <li>20+ years leading engineering teams</li>
-                  </ul>
-                </CardContent>
-              </Card>
+                )}
+              </div>
               <Card className="bg-gray-50/50 dark:bg-gray-800/50">
                 <CardContent className="p-6 text-center">
                   <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
@@ -284,7 +319,7 @@ export function LandingPage() {
               <div className="space-y-8 grow flex flex-col justify-between">
                 <h2 className="text-3xl font-medium tracking-tight dark:text-white text-center">Licensing</h2>
                 <p className="text-gray-500 dark:text-gray-400 text-center">
-                  Licensing fees for our foundational ontologies, tools and training/support generate ARR.
+                  Licensing fees for our foundational ontologies, agentic workforce, tools and training/support generate ARR.
                 </p>
                 <div className="mt-auto grid gap-4 md:grid-cols-3">
                   <Card className="bg-gray-50/50 dark:bg-gray-800/50">
