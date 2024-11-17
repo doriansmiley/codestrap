@@ -1,7 +1,6 @@
 'use client'
 
 import Image from "next/image";
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { CircleDollarSign, Users, Brain, Rocket, Search, Menu, Moon, Sun, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
