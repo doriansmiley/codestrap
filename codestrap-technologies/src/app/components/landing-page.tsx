@@ -50,13 +50,6 @@ export function LandingPage() {
             {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             <span className="sr-only">Toggle dark mode</span>
           </Button>
-          <Button variant="ghost" size="icon" className="hidden md:flex">
-            <Search className="h-4 w-4" />
-            <span className="sr-only">Search</span>
-          </Button>
-          <Button variant="outline" className="hidden md:flex">
-            Get Started
-          </Button>
           <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMobileMenu}>
             <Menu className="h-4 w-4" />
             <span className="sr-only">Toggle menu</span>
@@ -81,7 +74,7 @@ export function LandingPage() {
         </div>
       )}
       <main className="flex-1">
-        <section className="w-full py-24 md:py-32 flex items-center justify-center">
+        <section className="w-full py-24 md:py-24 flex items-center justify-center">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h1 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl dark:text-white">
@@ -91,9 +84,12 @@ export function LandingPage() {
                 </span>
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                CodeStrap Technologies provides AI Services built on Palantir Technologies.<br />
+                CodeStrap Technologies provides AI Services built on Palantir Foundry.<br />
                 We bootstrap AI adoption across the world&apos;s largest enterprises using foundational ontologies that codify your business.
               </p>
+              <Button onClick={() => router.push('https://calendar.app.google/piwEUL98FGZkAccy5')} variant="outline" className="hidden md:flex bg-green-400 hover:bg-white hover:text-blue-700 font-semibold text-white border hover:border-blue-400">
+                Request a Meeting
+              </Button>
             </div>
           </div>
         </section>
@@ -193,37 +189,35 @@ export function LandingPage() {
               Our founders have worked at every level of the software stack and business, and are using that depth of knowledge
               to do something that has never been done before: <span className="font-bold text-green-400">deliver enterprise software that compounds value for the customer</span>.
             </p>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-8 lg:grid-cols-4">
               <div
-                className="relative transition-all duration-300 ease-in-out transform hover:scale-105"
+                className="relative transition-all duration-300 ease-in-out transform hover:scale-105 flex"
                 onMouseEnter={() => setHoveredCard(0)}
                 onMouseLeave={() => setHoveredCard(null)}
                 onClick={() => router.push('/bios#connor-deeks')}
               >
-                <Link href="/bios">
-                  <Card className="bg-gray-50/50 dark:bg-gray-800/50">
-                    <CardContent className="p-6 text-center">
-                      <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
-                        <Image
-                          src="/cdeeks.png"
-                          alt="Team member photo"
-                          width={96}
-                          height={96}
-                          className="object-cover"
-                        />
-                      </div>
-                      <h3 className="font-medium tracking-tight dark:text-white">Connor Deeks</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">CEO</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">PwC</p>
-                      <ul className="text-sm text-gray-500 dark:text-gray-400">
-                        <li>Palantir Alliance Lead Director</li>
-                        <li>Led commercial strategy</li>
-                        <li>Pipeline $0 to $40m in 2 years</li>
-                        <li>Led implementation at major clients</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </Link>
+                <Card className="bg-gray-50/50 dark:bg-gray-800/50 grow">
+                  <CardContent className="p-6 text-center">
+                    <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                      <Image
+                        src="/cdeeks.png"
+                        alt="Team member photo"
+                        width={96}
+                        height={96}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="font-medium tracking-tight dark:text-white">Connor Deeks</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">CEO</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">PwC</p>
+                    <ul className="text-sm text-gray-500 dark:text-gray-400">
+                      <li>Palantir Alliance Lead Director</li>
+                      <li>Led commercial strategy</li>
+                      <li>Pipeline $0 to $40m in 2 years</li>
+                      <li>Led implementation at major clients</li>
+                    </ul>
+                  </CardContent>
+                </Card>
                 {hoveredCard === 0 && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
                     <p className="text-white font-medium">Click to learn more</p>
@@ -231,12 +225,12 @@ export function LandingPage() {
                 )}
               </div>
               <div
-                className="relative transition-all duration-300 ease-in-out transform hover:scale-105"
+                className="relative transition-all duration-300 ease-in-out transform hover:scale-105 flex"
                 onMouseEnter={() => setHoveredCard(1)}
                 onMouseLeave={() => setHoveredCard(null)}
                 onClick={() => router.push('/bios#dorian-smiley')}
               >
-                <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+                <Card className="bg-gray-50/50 dark:bg-gray-800/50 grow">
                   <CardContent className="p-6 text-center">
                     <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
                       <Image
@@ -264,7 +258,7 @@ export function LandingPage() {
                   </div>
                 )}
               </div>
-              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+              <Card className="bg-gray-50/50 dark:bg-gray-800/50 grow">
                 <CardContent className="p-6 text-center">
                   <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
                   <h3 className="font-medium tracking-tight dark:text-white">Redacted</h3>
@@ -272,7 +266,7 @@ export function LandingPage() {
                   <p className="text-sm text-gray-500 dark:text-gray-400">F500 Industrial OEM</p>
                 </CardContent>
               </Card>
-              <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+              <Card className="bg-gray-50/50 dark:bg-gray-800/50 grow">
                 <CardContent className="p-6 text-center">
                   <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
                   <h3 className="font-medium tracking-tight dark:text-white">Redacted</h3>
