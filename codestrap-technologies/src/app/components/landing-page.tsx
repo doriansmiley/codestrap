@@ -10,10 +10,10 @@ import { Card, CardContent } from "@codestrap/app/components/ui/card";
 
 
 export function LandingPage() {
-  const [darkMode, setDarkMode] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
-  const router = useRouter()
+  const [darkMode, setDarkMode] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (darkMode) {
@@ -257,22 +257,176 @@ export function LandingPage() {
                   </div>
                 )}
               </div>
-              <Card className="bg-gray-50/50 dark:bg-gray-800/50 grow">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
-                  <h3 className="font-medium tracking-tight dark:text-white">Redacted</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Platform Lead, Manufacturing</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">F500 Industrial OEM</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-50/50 dark:bg-gray-800/50 grow">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
-                  <h3 className="font-medium tracking-tight dark:text-white">Redacted</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Platform Lead, Healthcare</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">F500 Healthcare Logistics</p>
-                </CardContent>
-              </Card>
+              <div
+                className="relative transition-all duration-300 ease-in-out transform hover:scale-105 flex"
+                onMouseEnter={() => setHoveredCard(2)}
+                onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => router.push('/bios#bryce-leszczynski')}
+              >
+                <Card className="bg-gray-50/50 dark:bg-gray-800/50 grow">
+                  <CardContent className="p-6 text-center">
+                    <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                      <Image
+                        src="/bleszczynski.jpg"
+                        alt="Team member photo"
+                        width={96}
+                        height={96}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="font-medium tracking-tight dark:text-white">Bryce Leszczynski</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Platform Lead, Manufacturing</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Komatsu, ex-PwC</p>
+                    <ul className="text-sm text-gray-500 dark:text-gray-400">
+                      <li>Palantir Platform Leader</li>
+                      <li>Heavy Equipment Manufacturer Industry Expert</li>
+                      <li>Digital Consulting Expert</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                {hoveredCard === 2 && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+                    <p className="text-white font-medium">Click to learn more</p>
+                  </div>
+                )}
+              </div>
+              <div
+                className="relative transition-all duration-300 ease-in-out transform hover:scale-105 flex"
+                onMouseEnter={() => setHoveredCard(3)}
+                onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => router.push('/bios#david-dziedzic')}
+              >
+                <Card className="bg-gray-50/50 dark:bg-gray-800/50 grow">
+                  <CardContent className="p-6 text-center">
+                    <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                      <Image
+                        src="/ddziedzic.jpg"
+                        alt="Team member photo"
+                        width={96}
+                        height={96}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="font-medium tracking-tight dark:text-white">David Dziedzic</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Platform Lead, Healthcare</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Owens & Minor, ex-Wall Street</p>
+                    <ul className="text-sm text-gray-500 dark:text-gray-400">
+                      <li>Palantir Platform Leader</li>
+                      <li>Healthcare Solutions Industry Expert</li>
+                      <li>HR Analytics Expert</li>
+                      <li>Startup Warrior</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                {hoveredCard === 3 && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+                    <p className="text-white font-medium">Click to learn more</p>
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="grid gap-8 lg:grid-cols-3 py-8">
+              <div
+                className="relative transition-all duration-300 ease-in-out transform hover:scale-105"
+                onMouseEnter={() => setHoveredCard(5)}
+                onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => router.push('/bios#chris-simpson')}
+              >
+                <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+                  <CardContent className="p-6 text-center">
+                    <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                      <Image
+                        src="/csimpson.jpg"
+                        alt="Team member photo"
+                        width={96}
+                        height={96}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="font-medium tracking-tight dark:text-white">Chris Simpson</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Platform Lead, Automotive</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Lear Corp, , ex-A.T. Kearney</p>
+                    <ul className="text-sm text-gray-500 dark:text-gray-400">
+                      <li>Palantir Platform Leader</li>
+                      <li>Automotive Industry Expert</li>
+                      <li>Continuous Improvement Specialist</li>
+                      <li>Manufacturing & Operations Consultant</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                {hoveredCard === 5 && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+                    <p className="text-white font-medium">Click to learn more</p>
+                  </div>
+                )}
+              </div>
+              <div
+                className="relative transition-all duration-300 ease-in-out transform hover:scale-105"
+                onMouseEnter={() => setHoveredCard(6)}
+                onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => router.push('/bios#chris-knight')}
+              >
+                <Card className="bg-gray-50/50 dark:bg-gray-800/50">
+                  <CardContent className="p-6 text-center">
+                    <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                      <Image
+                        src="/cknight.jpg"
+                        alt="Team member photo"
+                        width={96}
+                        height={96}
+                        className="object-cover h-full"
+                      />
+                    </div>
+                    <h3 className="font-medium tracking-tight dark:text-white">Chris Knight</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Platform Lead, Engineering</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Guild Education, ex-Xerot</p>
+                    <ul className="text-sm text-gray-500 dark:text-gray-400">
+                      <li>Lead Palantir Engineer</li>
+                      <li>Senior Software Engineering</li>
+                      <li>Financial Services - Payments Expert</li>
+                      <li>Data Integration Specialist</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                {hoveredCard === 6 && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+                    <p className="text-white font-medium">Click to learn more</p>
+                  </div>
+                )}
+              </div>
+              <div
+                className="relative transition-all duration-300 ease-in-out transform hover:scale-105 flex"
+                onMouseEnter={() => setHoveredCard(7)}
+                onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => router.push('/bios#michael-lau')}
+              >
+                <Card className="bg-gray-50/50 dark:bg-gray-800/50 grow">
+                  <CardContent className="p-6 text-center">
+                    <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                      <Image
+                        src="/mlaue.jpg"
+                        alt="Team member photo"
+                        width={96}
+                        height={96}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="font-medium tracking-tight dark:text-white">Michael Lau</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Platform Lead, Engineering</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Axel, NIC, ex-CITGO Petroleum</p>
+                    <ul className="text-sm text-gray-500 dark:text-gray-400">
+                      <li>Lead Palantir Engineer</li>
+                      <li>ML / Data Engineer</li>
+                      <li>Senior Software Engineer</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                {hoveredCard === 7 && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+                    <p className="text-white font-medium">Click to learn more</p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </section>
@@ -291,7 +445,7 @@ export function LandingPage() {
                       <CircleDollarSign className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
                       <h4 className="text-xl font-medium tracking-tight dark:text-white">$500k</h4>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Fixed Fee</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">&nbsp;</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">1-2% Value Delivered</p>
                     </CardContent>
                   </Card>
                   <Card className="bg-gray-50/50 dark:bg-gray-800/50">
@@ -311,7 +465,7 @@ export function LandingPage() {
                 </div>
               </div>
               <div className="space-y-8 grow flex flex-col justify-between">
-                <h2 className="text-3xl font-medium tracking-tight dark:text-white text-center">Licensing</h2>
+                <h2 className="text-3xl font-medium tracking-tight dark:text-white text-center">Software Licensing</h2>
                 <p className="text-gray-500 dark:text-gray-400 text-center">
                   Licensing fees for our foundational ontologies, agentic workforce, tools and training/support generate ARR.
                 </p>
