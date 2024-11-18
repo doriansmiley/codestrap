@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from 'next/navigation';
-import { CircleDollarSign, Users, Brain, Rocket, Search, Menu, Moon, Sun, ChevronRight } from "lucide-react";
+import { CircleDollarSign, Users, Brain, Rocket, Menu, Moon, Sun, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
 import { Button } from "@codestrap/app/components/ui/button";
