@@ -86,7 +86,7 @@ export function LandingPage() {
                 CodeStrap Technologies provides AI Services built on Palantir Foundry.<br />
                 We bootstrap AI adoption across the world&apos;s largest enterprises using foundational ontologies that codify your business.
               </p>
-              <Button onClick={() => router.push('https://calendar.app.google/piwEUL98FGZkAccy5')} variant="outline" className="hidden md:flex bg-green-400 hover:bg-white hover:text-blue-700 font-semibold text-white border hover:border-blue-400">
+              <Button onClick={() => router.push('https://calendar.app.google/piwEUL98FGZkAccy5')} variant="outline" className="md:flex bg-green-400 hover:bg-white hover:text-blue-700 font-semibold text-white border hover:border-blue-400">
                 Request a Meeting
               </Button>
             </div>
