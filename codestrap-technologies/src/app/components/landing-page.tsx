@@ -58,13 +58,6 @@ export function LandingPage() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
           <nav className="flex flex-col p-4 space-y-2">
-            <Button variant="ghost" className="justify-start" onClick={() => { /* Add search functionality */ }}>
-              <Search className="h-4 w-4 mr-2" />
-              Search
-            </Button>
-            <Button variant="ghost" className="justify-start">
-              Get Started
-            </Button>
             <Button variant="ghost" className="justify-start" onClick={toggleDarkMode}>
               {darkMode ? <Sun className="h-4 w-4 mr-2" /> : <Moon className="h-4 w-4 mr-2" />}
               {darkMode ? 'Light Mode' : 'Dark Mode'}
