@@ -76,8 +76,8 @@ export function LandingPage() {
                 </span>
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                CodeStrap Technologies provides AI Services built on Palantir Foundry.<br />
-                We bootstrap AI adoption across the world&apos;s largest enterprises using foundational ontologies that codify your business.
+                CodeStrap Technologies provides AI Services for the world&apos;s largest enterprises.
+                We bootstrap your ontology and codify your business!
               </p>
               <Button onClick={() => router.push('https://calendar.app.google/piwEUL98FGZkAccy5')} variant="outline" className="md:flex bg-green-400 hover:bg-white hover:text-blue-700 font-semibold text-white border hover:border-blue-400">
                 Request a Meeting
@@ -126,7 +126,7 @@ export function LandingPage() {
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     SaaS companies are optimized for their growth, not your business.
                     Outsourcing your mission is not a winning strategy.
-                    It&apos;s time to mold software to your business by transforming it into an ontology.
+                    It&apos;s time to mold software to the business!
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     We provide <span className="font-bold text-green-400">foundational ontologies that ship with an agentic workforce</span>.
@@ -145,7 +145,8 @@ export function LandingPage() {
                     spent on presentations, project management, and meetings.
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    <span className="font-bold text-green-400">We specialize in enablement</span>. Our partners are business leaders who have implemented and managed Palantir Tech at
+                    <span className="font-bold text-green-400">We specialize in enablement</span>.
+                    Our partners are business leaders who have implemented and managed Palantir stacks at
                     Fortune 500 companies. Our teams <span className="font-bold text-green-400">implement strategy and align use cases with value</span>.
                     And we do this at a low fixed cost by <span className="font-bold text-green-400">using the technology we sell</span>.
                   </p>
@@ -156,13 +157,13 @@ export function LandingPage() {
                   <Rocket className="h-12 w-12 mb-4 text-green-400 dark:text-green-100" />
                   <h3 className="text-xl font-medium tracking-tight dark:text-white">Scaled Adoption Framework</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Adopting and scaling Foundry is difficult. There are challenges
+                    Adopting and scaling AI is difficult. There are challenges
                     across governance, development and value tracking that few have solved.
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Scale AI across your enterprise using our framework and specialists.
+                    We scale AI across your enterprise using our framework and specialists.
                     <span className="font-bold text-green-400">We know the challenges you will face and how to overcome them</span>.
-                    We will create your champions, scale your teams, and empower you to build your own solutions.
+                    We will create your champions, scale your teams, and empower you to build solutions that deliver real business value.
                   </p>
                 </CardContent>
               </Card>
@@ -174,12 +175,10 @@ export function LandingPage() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-medium tracking-tight text-center mb-6 dark:text-white">Founding Partners</h2>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
-              CodeStrap Technologies is <span className="font-bold text-green-400">composed of disruptors</span> who have driven organizational change across business and engineering
-              roles at the world&apos;s largest institutions. We&apos;ve all graduated as Palantir champions from our respective industries and <span className="font-bold text-green-400">combine a mastery of Foundry with impeccable business acumen.</span>
-              We have run AI workloads in production at scale.
-              We have learned how valuable heterodox thinking is when reinventing software to be AI first.
-              Our founders have worked at every level of the software stack and business, and are using that depth of knowledge
-              to do something that has never been done before: <span className="font-bold text-green-400">deliver enterprise software that compounds value for the customer</span>.
+              CodeStrap Technologies was founded by a <span className="font-bold text-green-400">team of disruptors</span> with a shared mission: reinventing enterprise software to unlock compounding value for customers.
+              Our founders are <span className="font-bold text-green-400">industry experts</span> who&apos;ve driven transformation across engineering and business
+              operations at some of the world&apos;s largest institutions. We&apos;ve implemented AI solutions at scale, tackling the toughest production challenges.
+              By <span className="font-bold text-green-400">combining deep technical expertise with business acumen</span>, we approach software with heterodox thinking—building AI-first systems that redefine what enterprise software can achieve.
             </p>
             <div className="grid gap-8 lg:grid-cols-4">
               <div

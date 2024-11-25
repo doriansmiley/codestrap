@@ -1,0 +1,25 @@
+{
+  "name": "@codestrap/channel-recorder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "DEBUG=codestrap-slack-recorder-bot:* PORT=3001 node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doriansmiley/codestrap.git"
+  },
+  "author": "Dorian Smiley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doriansmiley/codestrap/issues"
+  },
+  "homepage": "https://github.com/doriansmiley/codestrap#readme",
+  "dependencies": {
+    "@slack/bolt": "^4.1.0",
+    "debug": "^4.3.7",
+    "dotenv": "^16.4.5"
+  }
+}

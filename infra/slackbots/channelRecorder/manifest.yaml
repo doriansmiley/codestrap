@@ -1,0 +1,31 @@
+_metadata:
+  major_version: 1
+  minor_version: 0
+
+display_information:
+  name: Channel Recorder Bot
+  description: A bot that records messages from a channel and sends them to an API.
+  background_color: "#4A154B"
+
+features:
+  bot_user:
+    display_name: Channel Recorder
+    always_online: true
+
+oauth_config:
+  scopes:
+    bot:
+      - channels:history
+      - channels:read
+      - chat:write
+      - app_mentions:read
+
+settings:
+  event_subscriptions:
+    bot_events:
+      - message.channels
+    request_url: https://codestrap.usw-3.palantirfoundry.com/api/v2/ontologies/ontology-c0c8a326-cd0a-4f69-a575-b0399c04b74d/actions/create-slack-messages/apply # Replace with your actual request URL
+  interactivity:
+    is_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false
