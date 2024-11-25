@@ -28,7 +28,7 @@ function convertSlackTimestampToUTC (messageTs) {
 debug("Setting up bot with ingress at:", apiEndpoint);
 
 // Listen to all messages in the channel
-app.message(async ({ message, context }) => {
+app.message(async ({ message, context, say }) => {
   try {
      // Ignore bot messages
     if (message.subtype === "bot_message") return;
