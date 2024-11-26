@@ -18,7 +18,9 @@ oauth_config:
       - channels:history
       - channels:read
       - chat:write
-      - app_mentions:read
+      - groups:history
+      - im:history
+      - mpim:history
 
 settings:
   event_subscriptions:
