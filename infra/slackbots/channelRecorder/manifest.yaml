@@ -3,14 +3,14 @@ _metadata:
   minor_version: 0
 
 display_information:
-  name: Channel Recorder Bot
-  description: A bot that records messages from a channel and sends them to an API.
+  name: External Transforms Recorder
+  description: A bot that enable Foundry connectivity
   background_color: "#4A154B"
 
 features:
   bot_user:
-    display_name: Channel Recorder
-    always_online: true
+    display_name: External Transforms Recorder
+    always_online: false
 
 oauth_config:
   scopes:
