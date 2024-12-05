@@ -192,7 +192,7 @@ export default function LandingPage() {
                                         Ready to Transform?
                                     </h2>
                                     <p className="text-4xl font-bold text-[#7dcb87]">
-                                        Let's Begin
+                                        Let&apos;s Begin
                                     </p>
                                     <p className="mx-auto mt-6 max-w-2xl text-lg text-green-300 font-mono">
                                         Join us at the intersection of innovation and execution.

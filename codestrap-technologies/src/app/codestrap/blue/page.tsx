@@ -1,6 +1,5 @@
 import { Button } from "@codestrap/app/components/ui/button";
-import { ArrowRight, BarChart3, FileSpreadsheet, Lightbulb, Rocket, Target, Users } from 'lucide-react';
-import Link from "next/link";
+import { ArrowRight } from 'lucide-react';
 import Image from "next/image";
 
 export default function LandingPage() {
