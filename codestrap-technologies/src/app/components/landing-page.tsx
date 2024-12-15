@@ -196,7 +196,7 @@ export function LandingPage() {
               </div>
               <div className="relative w-24 h-24 mx-auto mb-4">
                 <Image
-                  src="/intuit-logo.png"
+                  src="/intuit-logo-2.png"
                   alt="Intuit"
                   width={96}
                   height={96}
