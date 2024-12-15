@@ -175,7 +175,7 @@ export function LandingPage() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-medium tracking-tight text-center mb-6 dark:text-white">Founding Partners</h2>
             <h3 className="text-1xl font-medium tracking-tight text-center mb-6 dark:text-white">Formerly:</h3>
-            <div className="grid grid-flow-col auto-rows-min">
+            <div className="flex flex-wrap items-center justify-center gap-8">
               <div className="relative w-24 h-24 mx-auto mb-4">
                 <Image
                   src="/accenture-logo.svg"
