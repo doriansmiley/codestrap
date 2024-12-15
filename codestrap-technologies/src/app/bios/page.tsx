@@ -212,6 +212,34 @@ export default function BiosPage() {
                 </Button>
             </section>
 
+            <section id="derek-schwartz" className="mb-12">
+                <Image
+                    src="/dschwartz.jpg"
+                    alt="Team member photo"
+                    width={96}
+                    height={96}
+                    className="object-cover"
+                />
+                <h2 className="text-2xl font-semibold mb-4">Derek Schwartz</h2>
+                <p className="mb-4">
+                    Derek is the Group Manager for Data Science & Analytics at Intuit Identity Platform. At Intuit, Derek spearheaded the adoption of Palantir to perform anomaly detection for identity managment bolstering Intuit&apos;s security poster.
+                    He managed a team of engineering using Foundry to build next generation ML solutions to some of the world&apos;s toughest security challenges.
+                    He also was the first adopter at Intuit of Palantir Technologies and championed its usage across the organization.
+                </p>
+                <p className="mb-4">
+                    Derek brings 20+ years of experience in applied ML and statistics with previous experience at major financial institutions such as Capital One and Merrill Lynch.
+                </p>
+                <Button
+                    asChild
+                    className="bg-[#0A66C2] hover:bg-[#004182] text-white font-semibold py-2 px-4 rounded inline-flex items-center"
+                >
+                    <Link href="https://www.linkedin.com/in/derekscottschwartz/">
+                        <Linkedin className="mr-2 h-5 w-5" />
+                        LinkedIn
+                    </Link>
+                </Button>
+            </section>
+
             <Button asChild>
                 <Link href="/#team">Back to Home</Link>
             </Button>

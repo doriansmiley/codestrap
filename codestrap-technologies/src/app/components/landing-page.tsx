@@ -174,6 +174,90 @@ export function LandingPage() {
         <section id="team" className="w-full py-12 md:pb-24 bg-white dark:bg-gray-800 flex items-center justify-center">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-medium tracking-tight text-center mb-6 dark:text-white">Founding Partners</h2>
+            <h3 className="text-1xl font-medium tracking-tight text-center mb-6 dark:text-white">Formerly:</h3>
+            <div className="grid grid-flow-col auto-rows-min">
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                <Image
+                  src="/accenture-logo.svg"
+                  alt="Accenture"
+                  width={96}
+                  height={96}
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                <Image
+                  src="/pwc-logo.svg"
+                  alt="PwC"
+                  width={96}
+                  height={96}
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                <Image
+                  src="/intuit-logo.png"
+                  alt="Intuit"
+                  width={96}
+                  height={96}
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                <Image
+                  src="/komatsu-logo.png"
+                  alt="Komatsu"
+                  width={96}
+                  height={96}
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                <Image
+                  src="/owens-minors-logo.png"
+                  alt="Owens & Minors"
+                  width={96}
+                  height={96}
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                <Image
+                  src="/lear-logo.svg"
+                  alt="Lear"
+                  width={96}
+                  height={96}
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                <Image
+                  src="/guild-education-logo.webp"
+                  alt="Guild Education"
+                  width={96}
+                  height={96}
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                <Image
+                  src="/nih-logo.svg"
+                  alt="NIH"
+                  width={96}
+                  height={96}
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-24 h-24 mx-auto mb-4">
+                <Image
+                  src="/brainly-logo.png"
+                  alt="Brainly"
+                  width={96}
+                  height={96}
+                  className="object-cover"
+                />
+              </div>
+            </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
               CodeStrap Technologies was founded by a <span className="font-bold text-green-400">team of disruptors</span> with a shared mission: reinventing enterprise software to unlock compounding value for customers.
               Our founders are <span className="font-bold text-green-400">industry experts</span> who&apos;ve driven transformation across engineering and business
@@ -317,7 +401,7 @@ export function LandingPage() {
                 )}
               </div>
             </div>
-            <div className="grid gap-8 lg:grid-cols-3 py-8">
+            <div className="grid gap-8 lg:grid-cols-4 py-8">
               <div
                 className="relative transition-all duration-300 ease-in-out transform hover:scale-105"
                 onMouseEnter={() => setHoveredCard(5)}
@@ -414,6 +498,39 @@ export function LandingPage() {
                   </CardContent>
                 </Card>
                 {hoveredCard === 7 && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+                    <p className="text-white font-medium">Click to learn more</p>
+                  </div>
+                )}
+              </div>
+              <div
+                className="relative transition-all duration-300 ease-in-out transform hover:scale-105 flex"
+                onMouseEnter={() => setHoveredCard(8)}
+                onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => router.push('/bios#derek-schwartz')}
+              >
+                <Card className="bg-gray-50/50 dark:bg-gray-800/50 grow">
+                  <CardContent className="p-6 text-center">
+                    <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                      <Image
+                        src="/dschwartz.jpg"
+                        alt="Team member photo"
+                        width={96}
+                        height={96}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="font-medium tracking-tight dark:text-white">Derek Schwartz</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Platform Lead, Financial Services</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Intuit, ex-Capital One</p>
+                    <ul className="text-sm text-gray-500 dark:text-gray-400">
+                      <li>Palantir Platform Leader</li>
+                      <li>Data Science and Analytics Expert</li>
+                      <li>Digital Experience Optimization and Operational Excellence Expert</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                {hoveredCard === 8 && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
                     <p className="text-white font-medium">Click to learn more</p>
                   </div>
