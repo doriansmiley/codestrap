@@ -222,12 +222,13 @@ export default function BiosPage() {
                 />
                 <h2 className="text-2xl font-semibold mb-4">Derek Schwartz</h2>
                 <p className="mb-4">
-                    Derek is the Group Manager for Data Science & Analytics at Intuit Identity Platform. At Intuit, Derek spearheaded the adoption of Palantir to perform anomaly detection for identity managment bolstering Intuit&apos;s security poster.
-                    He managed a team of engineering using Foundry to build next generation ML solutions to some of the world&apos;s toughest security challenges.
-                    He also was the first adopter at Intuit of Palantir Technologies and championed its usage across the organization.
+                    Derek is the Group Manager of Data Science & Analytics for Intuit&apos;s Identity Platform. He manages a team of data analysts, scientists, and engineers to build next generation ML solutions to some of the world&apos;s toughest identity and security challenges. Derek spear-headed the adoption of Palantir to internally develop a real-time anomaly detection capability based on time-series forecasting and machine learning frameworks, which led to improved operational excellence and security for some of Intuit&apos;s most critical platform capabilities. As the first adopter at Intuit of Palantir, he championed broader usage and adoption across the organization. Besides his pioneering work on Foundry, he led a team that ran hundreds of experiments for new features and optimizations that drove &gt;$100M in incremental revenue, including Identifier First Sign In, Passkeys, Unified User Management for small and medium sized business, Identity Resolution, and seamless customer access and data-sharing between Credit Karma and TurboTax products.
                 </p>
                 <p className="mb-4">
-                    Derek brings 20+ years of experience in applied ML and statistics with previous experience at major financial institutions such as Capital One and Merrill Lynch.
+                    Prior to his 6+ years at Intuit, Derek worked at Capital One in various roles for 7+ years, across Data Analytics, Business Analytics, and Data Product Management. He drove digital analytics adoption across the ecosystem, trained 500+ associates in Adobe Analytics, tested and launched a mobile-first website for Credit Card acquisitions that resulted in increasing the share of mobile web applications from 10% to over 60%, and launched a full-stack experimentation platform to enable experimentation at scale that resulted in the increase in number of experiments run from 30 to over 500 in less than two years, resulting in &gt;$100M in incremental revenue for the business.
+                </p>
+                <p className="mb-4">
+                    In total, Derek brings 15+ years of experience in applied machine learning, statistics, business strategy, analytics, experimentation, and optimization. He currently resides in San Diego, California with his family and two young children.
                 </p>
                 <Button
                     asChild
